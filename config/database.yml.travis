@@ -1,0 +1,7 @@
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: dot_ledger_test
+  pool: 5
+  username: postgres
+  password:
