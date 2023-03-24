@@ -1,0 +1,66 @@
+<form role="form">
+  <div class="row">
+    <div class="col-xs-6 col-sm-4">
+      <div class="form-group">
+        <label for="search_query" class="control-label">Search for</label>
+        <input type="text" class="form-control input-sm" id="search_query" name="query" placeholder="e.g. Coffee" />
+      </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-4">
+      <div class="form-group">
+        <label for="search_category" class="control-label">Category</label>
+        <select class="form-control input-sm" id="search_category" name="category"></select>
+      </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-2">
+      <div class="form-group">
+        <label for="search_date_from" class="control-label">From</label>
+        <input type="text" class="form-control input-sm" id="search_date_from" name="date_from" placeholder="e.g. 2011-01-01" />
+      </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-2">
+      <div class="form-group">
+        <label for="search_date_to" class="control-label">To</label>
+        <input type="text" class="form-control input-sm" id="search_date_to" name="date_to" placeholder="e.g. 2011-12-31" />
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-4">
+      <div class="form-group">
+        <label for="search_tags" class="control-label">Tags</label>
+        <select class="form-control input-sm" id="search_tags" name="tags"></select>
+      </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-4">
+      <div class="form-group">
+        <label for="search_account" class="control-label">Account</label>
+        <select class="form-control input-sm" id="search_account" name="account"></select>
+      </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-2">
+      <div class="form-group">
+        <label for="search_review" class="control-label">Review</label>
+        <select class="form-control input-sm" id="search_review" name="review"></select>
+      </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-2">
+      <div class="btn-group"style=" margin-top: 24px;">
+        <button type="button" class="search btn btn-default btn-sm" title="Search">Search</button>
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#" class="save-search">Save Search</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</form>

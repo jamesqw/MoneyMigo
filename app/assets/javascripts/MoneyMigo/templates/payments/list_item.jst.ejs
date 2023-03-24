@@ -1,0 +1,5 @@
+<td><%- name %></td>
+<td><%- category_name %></td>
+<td><%= spendAmount() %></td>
+<td><%= receiveAmount() %></td>
+<td class="text-right"><a href="<%= DotLedger.path.editPayment({id: id}) %>" class="edit-payment btn-xs btn btn-default" title="Edit">Edit</a></td>

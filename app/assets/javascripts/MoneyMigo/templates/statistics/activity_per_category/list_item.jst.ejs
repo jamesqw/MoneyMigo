@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-3">
+    <strong class="name"><a href="#"><%= name %></a></strong>
+  </div>
+  <div class="col-md-9">
+    <div class="progress">
+      <div class="progress-bar <%= progressClass() %>" style="width: <%= progressWidth() %>%;"></div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-4 text-muted">
+    <small>Spent: <strong><%= DotLedger.Helpers.Format.money(spent) %></strong></small>
+  </div>
+  <div class="col-xs-4 text-muted">
+    <small>Goal: <strong title="<%= DotLedger.Helpers.Format.money(goal_amount) %> per <%= goal_period %>"><%= DotLedger.Helpers.Format.money(goal) %></strong></small>
+  </div>
+  <% if (overGoal()) { %>
+  <div class="col-xs-4 text-danger">
+    <small>Overspent: <strong><%= DotLedger.Helpers.Format.money(spent-goal) %></strong></small>
+  </div>
+  <% } else { %>
+  <div class="col-xs-4 text-muted">
+    <small>Remaining: <strong><%= DotLedger.Helpers.Format.money(goal-spent) %></strong></small>
+  </div>
+  <% } %>
+</div>

@@ -1,0 +1,51 @@
+<div class="panel-heading">
+  <% if (showNewAccountButton()) { %>
+  <div class="pull-right">
+    <a href="<%= DotLedger.path.newAccount() %>" class="btn btn-xs btn-default" title="New Account">
+      New Account
+    </a>
+  </div>
+  <% } %>
+  <h3 class="panel-title"><%= pageTitle() %></h3>
+</div>
+
+<% if (showSummary()) { %>
+<div class="panel-body">
+  <div class="row text-muted">
+    <div class="col-xs-4 text-left">
+      <small>Total cash: <strong><%= DotLedger.Helpers.Format.money(totalCash()) %></strong></small>
+    </div>
+    <div class="col-xs-4 text-center">
+      <small>Total debt: <strong><%= DotLedger.Helpers.Format.money(totalDebt()) %></strong></small>
+    </div>
+    <div class="col-xs-4 text-right">
+      <small>Difference: <strong><%= DotLedger.Helpers.Format.money(totalCash() - totalDebt()) %></strong></small>
+    </div>
+  </div>
+</div>
+<% } %>
+<% if (hasAccounts()) { %>
+<% _.each(accountGroups(), function(group) { %>
+  <div class="list-group" id="<%= group.id %>">
+    <div class="list-group-item active">
+      <span class="pull-right text-right"><%= DotLedger.Helpers.Format.money(group.net) %></span>
+      <h4>
+      <% if (group.label) { %>
+        <%= group.label %>
+      <% } else { %>
+        <i>Other</i>
+      <% } %>
+      </h4>
+    </div>
+  </div>
+<% }) %>
+<% } else { %>
+  <h3 class="blankslate">No Accounts</h3>
+<% } %>
+
+
+<% if (showShowAllLink()) { %>
+<div class="panel-footer">
+  <a href="<%= DotLedger.path.listAccounts() %>">Show all accounts</a>
+</div>
+<% } %>

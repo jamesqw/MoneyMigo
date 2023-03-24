@@ -1,0 +1,62 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h4 class="modal-title">Transaction Details</h4>
+    </div>
+    <div class="modal-body">
+      <dl class="dl-horizontal">
+        <dt>Account</dt>
+        <dd><%- account_name %></dd>
+
+        <dt>Account Group</dt>
+        <dd>
+        <% if (account_group_name === null) { %>
+          <i>Other</i>
+        <% } else { %>
+          <%- account_group_name %>
+        <% } %>
+        </dd>
+
+        <dt>Amount</dt>
+        <dd><%- amount %></dd>
+
+        <dt>Memo</dt>
+        <dd><%- memo %></dd>
+
+        <dt>Fit ID</dt>
+        <dd><%- fit_id %></dd>
+
+        <dt>Name</dt>
+        <dd><%- name %></dd>
+
+        <dt>Payee</dt>
+        <dd><%- payee %></dd>
+
+        <dt>Ref number</dt>
+        <dd><%- ref_number %></dd>
+
+        <dt>Type</dt>
+        <dd><%- type %></dd>
+
+        <dt>Date</dt>
+        <dd><time datetime="<%- posted_at %>"><%= DotLedger.Helpers.Format.shortDate(posted_at) %></time></dd>
+
+      <% if (sorted_transaction) { %>
+        <dt>Category</dt>
+        <dd><%- sorted_transaction.category_name %></dd>
+
+        <dt>Tags</dt>
+        <dd><%- sorted_transaction.tag_list %></dd>
+
+        <dt>Note</dt>
+        <dd>
+          <% if (sorted_transaction.note) { %>
+            <p><%- sorted_transaction.note %></p>
+          <% } %>
+        </dd>
+      <% } %>
+      </dl>
+    </div>
+  </div>
+</div>

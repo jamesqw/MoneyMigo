@@ -1,0 +1,18 @@
+<div class="page-header">
+  <div class="pull-right">
+    <a href="<%= DotLedger.path.newCategory() %>" class="btn btn-default" title="New Category">
+      New Category
+    </a>
+  </div>
+
+  <h1>Categories</h1>
+</div>
+
+<% _.each(categoryTypes(), function(type) { %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%- type.label %></h3>
+    </div>
+    <div class="list-group" id="<%= type.id %>"></div>
+  </div>
+<% }) %>
