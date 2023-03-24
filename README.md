@@ -16,7 +16,7 @@ requer:
 
 As etapas básicas de configuração são:
 
-- `cd dotledger`
+- `cd moneymigo`
 - `cp config/database.yml.example config/database.yml`
 
 Você terá que modificar o nome de usuário e a senha do postgres em `config/database.yml`.
