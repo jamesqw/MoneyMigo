@@ -1,0 +1,26 @@
+// Bootstrap variables
+
+$main-color: #6FCAC2;
+
+$navbar-height: 50px;
+
+$navbar-default-bg: $main-color;
+$navbar-default-color: #fff;
+
+$dropdown-link-hover-bg: $navbar-default-bg;
+
+$navbar-default-link-color: darken($main-color, 30%);
+$navbar-default-link-active-color: #fff;
+
+$navbar-default-brand-color: #fff;
+$navbar-default-brand-hover-color: #fff;
+
+$navbar-default-toggle-border-color: darken($main-color, 15%);
+$navbar-default-toggle-icon-bar-bg: darken($main-color, 15%);
+$navbar-default-toggle-hover-bg: lighten($main-color, 10%);
+
+$brand-primary: darken($main-color, 30%);
+$component-active-bg: darken($main-color, 10%);
+$component-active-color: #fff;
+
+$font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;

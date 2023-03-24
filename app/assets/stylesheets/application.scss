@@ -1,0 +1,159 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@import "variables";
+@import "bootstrap";
+@import "bootstrap-datepicker";
+@import "theme";
+
+#dot_ledger {
+  opacity: 1;
+  pointer-events: auto;
+
+  &.loading {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.page-header {
+  margin-top: 10px;
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: $screen-sm-max) {
+  #nav-search {
+    margin: 0 -15px;
+  }
+}
+
+#notifications {
+  padding-top: $navbar-height + 20px;
+}
+
+.form-horizontal input[type=file] {
+  margin-top: 6px;
+}
+
+.modal-dialog .modal-body .form-horizontal {
+  margin: 0 20px;
+}
+
+table.payments {
+  table-layout: fixed;
+
+  th.amount {
+    width: 10%;
+  }
+
+  th.edit {
+    width: 60px;
+  }
+}
+
+footer {
+  border-top: 1px solid $page-header-border-color;
+  font-size: 0.8em;
+  padding: 20px 0;
+  text-align: center;
+
+  a {
+    color: $text-muted;
+
+    &:hover {
+      color: darken($text-muted, 10%);
+    }
+  }
+}
+
+div.balance {
+  div.graph {
+    width: 100%;
+    height: 150px;
+  }
+
+  div.tooltip {
+    div.tooltip-inner {
+      width: 80px;
+    }
+  }
+}
+
+#activity-per-category-type-pie {
+  height: 400px;
+}
+
+.panel-heading, .panel-footer {
+  .nav-small {
+    > li {
+      > a {
+        padding: 5px 8px;
+      }
+    }
+  }
+
+  .nav-pills {
+    > li {
+      > a {
+        color: $brand-primary;
+        &:hover,
+        &:focus {
+          background-color: $component-active-color;
+        }
+
+        .badge {
+          background-color: $component-active-bg;
+        } 
+      }
+
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          background-color: $component-active-bg;
+          color: $component-active-color;
+
+          .badge {
+            background-color: $panel-default-heading-bg;
+            color: $component-active-bg;
+          } 
+        }
+      }
+    }
+  }
+}
+
+.panel-body.has-table {
+  padding: 0;
+
+  table {
+    margin-bottom: 0;
+  }
+}
+
+table {
+  td.amount, th.amount {
+    width: 120px;
+  }
+}
+
+.panel .list-group .list-group-item.active h4 {
+  margin: 0;
+}
+
+table thead th h3 {
+  margin: 0;
+}
+
+.panel table + hr {
+  margin: 0;
+}
+
+h3.blankslate {
+  @extend .text-muted;
+  @extend .text-center;
+  font-style: italic;
+  margin: 50px 0;
+}
