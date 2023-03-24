@@ -49,4 +49,4 @@ pacote exec rake spec: javascript
 
 Copyright 2013 - 2018, Kale Worsley, BitBot Limited.
 
-Dot Ledger é disponibilizado sob a Licença Apache, Versão 2.0. Consulte [LICENÇA](LICENÇA) para obter detalhes.
+MoneyMigo é disponibilizado sob a Licença Apache, Versão 2.0. Consulte [LICENÇA](LICENÇA) para obter detalhes.
